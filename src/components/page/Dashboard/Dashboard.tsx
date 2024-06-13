@@ -1,10 +1,9 @@
-import { Button } from "@/components/ui/button"
+import Banner from "./Banner";
 
 export default function Dashboard() {
     return (
         <main>
-            <h1>Example text</h1>
-            <Button>Click me</Button>
+            <Banner />
         </main>
     );
 }
