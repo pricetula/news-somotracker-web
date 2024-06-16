@@ -1,9 +1,7 @@
-import { Typography } from "@/components/custom/Typography";
+import Dashboard from "@/components/page/Dashboard/Dashboard";
+import { url } from "@/app/util/route";
 
-export default function Page() {
-  return (
-    <div>
-      <Typography tag="h1">Page</Typography>
-    </div>
-  );
+export default async function Home() {
+  const { news } = await fetch(url("/api/news?page=1")).then((res) => res.json());
+  return <Dashboard />;
 }
